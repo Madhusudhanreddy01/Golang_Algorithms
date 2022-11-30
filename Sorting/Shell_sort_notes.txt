@@ -1,0 +1,24 @@
+Shell sort is mainly a variation of Insertion Sort. In insertion sort, we move elements only one position ahead. 
+When an element has to be moved far ahead, many movements are involved. The idea of ShellSort is to allow the exchange of far items. 
+In Shell sort, we make the array h-sorted for a large value of h. We keep reducing the value of h until it becomes 
+1. An array is said to be h-sorted if all sublists of every h’th element are sorted.
+
+To understand the Shell sort, lets consider an unsorted array [10, 1, 23, 50, 4, 9, -4] and 
+discuss each step taken to sort the array in ascending order. 
+In this example, Shell's original sequence is considered hence the intervals (gaps) will be three and one (N=7).
+
+First Pass: For this pass, the gap size is three. Hence, the first element (10) is compared with fourth element (50) and found in the correct order. 
+Then the second element (1) is compared with fifth element (4) which are also in the correct order. 
+Then, the third element (23) is compared with the sixth element (9), since (23 > 9), the sixth element is replaced by (23) and (9) is stored in a temp variable. 
+As, third - gap = 0. Hence there is no element which can be compared with temp, therefore, the third term will be replaced by temp.
+
+After that, the fourth element (50) is compared with the seventh element (-4), since (50 > -4), the seventh element is replaced by (50) and (-4) is stored in a temp variable. 
+As, fourth - gap = 1, hence, the temp is again compared with first element (10). since (10 > -4), the fourth element is replaced by (10) and first element is replaced by temp (there is no element which can be compared with temp).
+
+Second Pass: For this pass gap size is one. First four elements are already sorted. After that, 
+the fourth element (10) is compared with the fifth element (4), since (10 > 4), 
+the fifth element is replaced by (10) and (4) is stored in a temp variable. 
+Now, the temp is compared with third element (9) which is greater than temp, 
+hence fourth element is replaced by (9). Then, the temp is compared with second element (1) which is less than temp, 
+hence third element is replaced by temp. 
+After that, sixth and seventh elements are also considered for comparison which are already sorted.
